@@ -94,4 +94,9 @@ public class CommonDaoImpl<T> extends HibernateDaoSupport implements ICommonDao<
 			query.setParameter(i, params[i]);
 		}
 	}
+
+	@Override
+	public void saveObjectByCollection(Collection<T> entities) {
+		this.getHibernateTemplate().saveOrUpdateAll(entities);
+	}
 }

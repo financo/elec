@@ -2,7 +2,7 @@ package com.wzy.domain;
 
 import java.util.Date;
 @SuppressWarnings("serial")
-public class ElecCommonMsg {
+public class ElecCommonMsg implements java.io.Serializable{
 
 	private String comID;        //主键ID
 	private String stationRun;   //站点运行情况

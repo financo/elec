@@ -14,4 +14,5 @@ public interface ICommonDao<T> {
 	void deleteObjectByCollection(Collection<T> entities);
 	List<T> findCollectionByConditionNoPage(String hqlWhere,
 			Object[] params, LinkedHashMap<String, String> orderby);
+	void saveObjectByCollection(Collection<T> entities);
 }

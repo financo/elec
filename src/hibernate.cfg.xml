@@ -16,5 +16,6 @@
 		
 		<mapping resource="com/wzy/domain/ElecText.hbm.xml"/>
 		<mapping resource="com/wzy/domain/ElecCommonMsg.hbm.xml"/>
+		<mapping resource="com/wzy/domain/ElecSystemDDl.hbm.xml"/>
 	</session-factory>
 </hibernate-configuration>

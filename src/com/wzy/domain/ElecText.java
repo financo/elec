@@ -2,7 +2,7 @@ package com.wzy.domain;
 
 import java.util.Date;
 @SuppressWarnings("serial")
-public class ElecText {
+public class ElecText implements java.io.Serializable{
 	private String textID;
 	private String textName;
 	private Date textDate;

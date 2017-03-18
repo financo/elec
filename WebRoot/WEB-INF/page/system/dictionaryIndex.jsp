@@ -1,13 +1,5 @@
-
 <%@ page language="java" pageEncoding="UTF-8"%>
-
-
-
-
-
-
-
-
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <HTML>
 	<HEAD>
 		<title>系统设置</title>		
@@ -109,7 +101,6 @@
        
 
  function insertRows(){ 
-
   var tempRow=0; 
   var tbl=document.getElementById("dictTbl");
   tempRow=tbl.rows.length; 
@@ -151,7 +142,7 @@ function delTableRow(rowNum){
  </HEAD>
 		
 	<body>
-	 <Form name="Form1" id="Form1"  method="post" style="margin:0px;">
+	 <s:form name="Form1" id="Form1"  method="post" cssStyle="margin:0px;">
 		<table cellSpacing="1" cellPadding="0" width="90%" align="center" bgColor="#f5fafe" border="0">
 			<TBODY>
 				<tr>
@@ -163,30 +154,12 @@ function delTableRow(rowNum){
 				<tr>
 					<td class="ta_01" align="right" width="35%" >类型列表：</td>
 					<td class="ta_01" align="left"  width="30%" >
-						<select name="keyword" class="bg" style="width:180px" onchange="changetype()">
-						 <option value="jerrynew"></option>
-						 
-						 <option value="故障类型">故障类型</option>
-						 
-						 <option value="建筑类型">建筑类型</option>
-						 
-						 <option value="角色类型">角色类型</option>
-						 
-						 <option value="设备类型">设备类型</option>
-						 
-						 <option value="设备状态">设备状态</option>
-						 
-						 <option value="所属单位">所属单位</option>
-						 
-						 <option value="图纸类别">图纸类别</option>
-						 
-						 <option value="项目级别">项目级别</option>
-						 
-						 <option value="项目类型">项目类型</option>
-						 
-						 <option value="站点类别">站点类别</option>
-						 
-						</select>
+						<s:select list="#request.systemList" id="keyword" name="keyword"
+						          listKey="keyword" listValue="keyword"
+						          headerKey="jerrynew" headerValue=""
+						          cssStyle="width:180px" cssClass="bg" onchange="changetype()"
+						          >
+						</s:select>
 					</td>
 						
 					 <td class="ta_01"  align="right" width="35%" >					 	    
@@ -209,9 +182,9 @@ function delTableRow(rowNum){
 				 </td></TR>   
 			</TBODY>
 		</table>
-		</Form>
+		</s:form>
 		
- <Form name="Form2" id="Form2"  method="post" style="margin:0px;">
+ <s:form name="Form2" id="Form2"  method="post" cssStyle="margin:0px;">
     <table cellSpacing="1" cellPadding="0" width="90%" align="center" bgColor="#f5fafe" border="0" >
     <tr>
      <td >
@@ -257,7 +230,7 @@ function delTableRow(rowNum){
    
     
    
-  </Form>
+  </s:form>
   </body>
 </HTML>
 
