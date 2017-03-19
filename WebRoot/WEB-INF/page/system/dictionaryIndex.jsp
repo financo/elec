@@ -20,7 +20,7 @@
 		     document.getElementById("newddlText").innerHTML=textStr;
 		     
 		     
-		     Pub.submitActionWithForm('Form2','getDdls.do','Form1');
+		     Pub.submitActionWithForm('Form2','system/elecSystemDDlAction_edit.do','Form1');
 		    
 		  }else{
 		    
@@ -28,7 +28,7 @@
 		    document.getElementById("newtypename").innerHTML="";
 		    document.getElementById("newddlText").innerHTML=textStr;
 		     
-		    Pub.submitActionWithForm('Form2','getDdls.do','Form1');
+		    Pub.submitActionWithForm('Form2','system/elecSystemDDlAction_edit.do','Form1');
 		  }  
 	   }
 	   
@@ -81,7 +81,7 @@
 		        }	
 		    }
 		  }
-	      document.Form2.action="savedict.do";
+	      document.Form2.action="system/elecSystemDDlAction_save.do";
 	      document.Form2.submit();     
 	}
 	  
